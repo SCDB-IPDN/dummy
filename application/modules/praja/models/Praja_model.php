@@ -48,117 +48,21 @@ class Praja_model extends CI_Model
 		return $result;
 	}
 
-	public function view_edit($editnya)
+	public function view_edit($input_data)
 	{
-		$npp =  $editnya['npp'];
-		$no_spcp =  $editnya['no_spcp'];
-		$nama =  $editnya['nama'];
-		$jk =  $editnya['jk'];
-		$nisn =  $editnya['nisn'];
-		$npwp =  $editnya['npwp'];
-		$nik_praja =  $editnya['nik_praja'];
-		$tmpt_lahir =  $editnya['tmpt_lahir'];
-		$tgl_lahir =  $editnya['tgl_lahir'];
-		$alamat =  $editnya['alamat'];
-		$rt =  $editnya['rt'];
-		$rw =  $editnya['rw'];
-		$nama_dusun =  $editnya['nama_dusun'];
-		$kelurahan =  $editnya['kelurahan'];
-		$kode_pos =  $editnya['kode_pos'];
-		$kab_kota =  $editnya['kab_kota'];
-		$provinsi =  $editnya['provinsi'];
-		$agama =  $editnya['agama'];
-		$kecamatan =  $editnya['kecamatan'];
-		$tlp_pribadi =  $editnya['tlp_pribadi'];
-		$tlp_rumah =  $editnya['tlp_rumah'];
-		$email =  $editnya['email'];
-		$prodi =  $editnya['prodi'];
-		$penerima_pks =  $editnya['penerima_pks'];
-		$no_pks =  $editnya['no_pks'];
-		$tgl_masuk_kuliah =  $editnya['tgl_masuk_kuliah'];
-		$tahun_masuk_kuliah =  $editnya['tahun_masuk_kuliah'];
-		$status =  $editnya['status'];
-		$tingkat =  $editnya['tingkat'];
-		$angkatan =  $editnya['angkatan'];
-		$fakultas =  $editnya['fakultas'];
-		$biaya_masuk =  $editnya['biaya_masuk'];
-		$mulai_semester =  $editnya['mulai_semester'];
-		$jenis_tinggal =  $editnya['jenis_tinggal'];
-		$alat_transport =  $editnya['alat_transport'];
-		$kewarganegaraan =  $editnya['kewarganegaraan'];
-		$pembiayaan =  $editnya['pembiayaan'];
-		$jalur_masuk =  $editnya['jalur_masuk'];
-		$nik_ayah  =  $editnya['nik_ayah'];
-		$nama_ayah  =  $editnya['nama_ayah'];
-		$tgllahir_ayah  =  $editnya['tgllahir_ayah'];
-	    $pendidikan_ayah  =  $editnya['pendidikan_ayah'];
-		$pekerjaan_ayah  =  $editnya['pekerjaan_ayah'];
-		$penghasilan_ayah  =  $editnya['penghasilan_ayah'];
-		$tlp_ayah  =  $editnya['tlp_ayah'];
-		$nik_ibu  =  $editnya['nik_ibu'];
-		$nama_ibu  =  $editnya['nama_ibu'];
-		$tgllahir_ibu =  $editnya['tgllahir_ibu'];
-		$pendidikan_ibu  =  $editnya['pendidikan_ibu'];
-		$pekerjaan_ibu =  $editnya['pekerjaan_ibu'];
-		$penghasilan_ibu  =  $editnya['penghasilan_ibu'];
-		$tlp_ibu  =  $editnya['tlp_ibu'];
-		$nik_wali =  $editnya['nik_wali'];
-		$nama_wali  =  $editnya['nama_wali'];
-		$tgllahir_wali  =  $editnya['tgllahir_wali'];
-		$tlp_wali =  $editnya['tlp_wali'];
-		$pendidikan_wali  =  $editnya['pendidikan_ibu'];
-		$pekerjaan_wali =  $editnya['pekerjaan_ibu'];
-		$penghasilan_wali  =  $editnya['penghasilan_ibu'];
-		$jenis_pendaftaran  =  $editnya['jenis_pendaftaran'];
-		$penempatan  =  $editnya['penempatan'];
+		$npp = $input_data['npp'];
+        return $this->db->where('npp', $npp)->update('tbl_praja', $input_data);
 
-		// print("<pre>".print_r($editnya,true)."</pre>");exit();
+	}
 
-		$hasil = $this->db->query("UPDATE tbl_praja 
-			SET 
-			npp = '$npp',
-			no_spcp = '$no_spcp',
-			nama = '$nama',
-			nisn = '$nisn',
-			npwp = '$npwp',
-			nik_praja = '$nik_praja',
-			tmpt_lahir = '$tmpt_lahir',
-			tgl_lahir = '$tgl_lahir',
-			alamat = '$alamat',
-			rt = '$rt',
-			rw = '$rw',
-			nama_dusun = '$nama_dusun',
-			kelurahan = '$kelurahan',
-			kode_pos = '$kode_pos',
-			tlp_pribadi = '$tlp_pribadi',
-			tlp_rumah = '$tlp_rumah',
-			email = '$email',
-			penerima_pks = '$penerima_pks',
-			no_pks = '$no_pks',
-			tgl_masuk_kuliah = '$tgl_masuk_kuliah',
-			tahun_masuk_kuliah = '$tahun_masuk_kuliah',
-			status = '$status',
-			tingkat = '$tingkat',
-			angkatan = '$angkatan',
-			biaya_masuk = '$biaya_masuk',
-			nik_ayah = '$nik_ayah',
-			nama_ayah = '$nama_ayah',
-			tgllahir_ayah = '$tgllahir_ayah',
-			tlp_ayah = '$tlp_ayah',
-			nik_ibu = '$nik_ibu',
-			nama_ibu = '$nama_ibu',
-			tgllahir_ibu = '$tgllahir_ibu',
-			tlp_ibu = '$tlp_ibu',
-			nik_wali = '$nik_wali',
-			nama_wali = '$nama_wali',
-			tgllahir_wali = '$tgllahir_wali',
-			tlp_wali = '$tlp_wali',
-			penempatan = '$penempatan'
+	public function tambah_praja($input_data)
+	{
+		return $this->db->insert('tbl_praja', $input_data);
 
-			WHERE npp ='$npp'
-			");
+	}
 
-		return $hasil;
+	public function hapus_praja($id){
+		return $this->db->where('id', $id)->delete('tbl_praja');
 	}
 
 	public function agama()

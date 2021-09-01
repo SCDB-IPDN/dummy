@@ -136,53 +136,6 @@ class Praja extends CI_Controller
       $nik_praja = $r->nik_praja== NULL ? "<i><font>Tidak ada data</font></i>":$r->nik_praja;
       $agama = $r->agama== NULL ? "<i><font>Tidak ada data</font></i>":$r->agama;
       $alamat = $r->alamat== NULL ? "<i><font>Tidak ada data</font></i>":$r->alamat;
-      $rt = $r->rt== NULL ? "<i><font>Tidak ada data</font></i>":$r->rt;
-      $rw = $r->rw== NULL ? "<i><font>Tidak ada data</font></i>":$r->rw;
-      $provinsi = $r->provinsi== NULL ? "<i><font>Tidak ada data</font></i>":$r->provinsi;
-      $kab_kota = $r->kab_kota== NULL ? "<i><font>Tidak ada data</font></i>":$r->kab_kota;
-      $kelurahan = $r->kelurahan== NULL ? "<i><font>Tidak ada data</font></i>":$r->kelurahan;
-      $nama_dusun = $r->nama_dusun== NULL ? "<i><font>Tidak ada data</font></i>":$r->nama_dusun;
-      $kecamatan = $r->kecamatan== NULL ? "<i><font>Tidak ada data</font></i>":$r->kecamatan;
-      $kode_pos = $r->kode_pos== NULL ? "<i><font>Tidak ada data</font></i>":$r->kode_pos;
-      $jenis_tinggal = $r->jenis_tinggal== NULL ? "<i><font>Tidak ada data</font></i>":$r->jenis_tinggal;
-      $tlp_pribadi = $r->tlp_pribadi== NULL ? "<i><font>Tidak ada data</font></i>":$r->tlp_rumah;
-      $tlp_rumah = $r->tlp_rumah== NULL ? "<i><font>Tidak ada data</font></i>":$r->email;
-      $email = $r->email== NULL ? "<i><font>Tidak ada data</font></i>":$r->email;
-      $kewarganegaraan = $r->kewarganegaraan== NULL ? "<i><font>Tidak ada data</font></i>":$r->kewarganegaraan;
-      $jenis_pendaftaran = $r->jenis_pendaftaran== NULL ? "<i><font>Tidak ada data</font></i>":$r->jenis_pendaftaran;
-      $tgl_masuk_kuliah = $r->tgl_masuk_kuliah== NULL ? "<i><font>Tidak ada data</font></i>":$r->tgl_masuk_kuliah;
-      $tahun_masuk_kuliah = $r->tahun_masuk_kuliah== NULL ? "<i><font>Tidak ada data</font></i>":$r->tahun_masuk_kuliah;
-      $pembiayaan = $r->pembiayaan== NULL ? "<i><font>Tidak ada data</font></i>": $r->pembiayaan;
-      $alat_transport = $r->alat_transport== NULL ? "<i><font>Tidak ada data</font></i>":$r->alat_transport;
-      $biaya_masuk = $r->biaya_masuk== NULL ? "<i><font>Tidak ada data</font></i>": $r->biaya_masuk;
-      $jalur_masuk = $r->jalur_masuk== NULL ? "<i><font>Tidak ada data</font></i>":$r->jalur_masuk;
-      $penerima_pks = $r->penerima_pks== NULL ? "<i><font>Tidak ada data</font></i>":$r->penerima_pks;
-      $no_pks = $r->no_pks== NULL ? "<i><font>Tidak ada data</font></i>":$r->no_pks;
-      $mulai_semester = $r->mulai_semester== NULL ? "<i><font>Tidak ada data</font></i>":$r->mulai_semester;
-
-      $nik_ayah = $r->nik_ayah== NULL ? "<i><font>Tidak ada data</font></i>":$r->nik_ayah;
-      $nama_ayah = $r->nama_ayah== NULL ? "<i><font>Tidak ada data</font></i>":$r->nama_ayah;
-      $tgllahir_ayah = $r->tgllahir_ayah== NULL ? "<i><font>Tidak ada data</font></i>":$r->tgllahir_ayah;
-      $pendidikan_ayah = $r->pendidikan_ayah== NULL ? "<i><font>Tidak ada data</font></i>":$r->pendidikan_ayah;
-      $pekerjaan_ayah = $r->pekerjaan_ayah== NULL ? "<i><font>Tidak ada data</font></i>":$r->pekerjaan_ayah;
-      $penghasilan_ayah = $r->penghasilan_ayah== NULL ? "<i><font>Tidak ada data</font></i>":$r->penghasilan_ayah;
-      $tlp_ayah = $r->tlp_ayah== NULL ? "<i><font>Tidak ada data</font></i>":$r->tlp_ayah;
-      $nik_ibu = $r->nik_ibu== NULL ? "<i><font>Tidak ada data</font></i>":$r->nik_ibu;
-      $nama_ibu = $r->nama_ibu== NULL ? "<i><font>Tidak ada data</font></i>":$r->nama_ibu;
-      $tgllahir_ibu = $r->tgllahir_ibu== NULL ? "<i><font>Tidak ada data</font></i>":$r->tgllahir_ibu;
-      $pendidikan_ibu = $r->pendidikan_ibu == NULL ? "<i><font>Tidak ada data</font></i>":$r->pendidikan_ibu;
-      $pekerjaan_ibu = $r->pekerjaan_ibu == NULL ? "<i><font>Tidak ada data</font></i>":$r->pekerjaan_ibu;
-      $penghasilan_ibu = $r->penghasilan_ibu == NULL ? "<i><font>Tidak ada data</font></i>":$r->penghasilan_ibu;
-      $tlp_ibu = $r->tlp_ibu == NULL ? "<i><font>Tidak ada data</font></i>":$r->tlp_ibu;
-
-      $nik_wali = $r->nik_wali == NULL ? "<i><font>Tidak ada data</font></i>":$r->nik_wali;
-      $nama_wali = $r->nama_wali == NULL ? "<i><font>Tidak ada data</font></i>":$r->nama_wali;
-      $tgllahir_wali = $r->tgllahir_wali == NULL ? "<i><font>Tidak ada data</font></i>":$r->tgllahir_wali;
-      $pendidikan_wali = $r->pendidikan_wali == NULL ? "<i><font>Tidak ada data</font></i>":$r->pendidikan_wali ;
-      $pekerjaan_wali = $r->pekerjaan_wali == NULL ? "<i><font>Tidak ada data</font></i>":$r->pekerjaan_wali;
-      $penghasilan_wali = $r->penghasilan_wali == NULL ? "<i><font>Tidak ada data</font></i>":$r->penghasilan_wali;
-      $tlp_wali = $r->tlp_wali== NULL ? "<i><font>Tidak ada data</font></i>":$r->tlp_wali;
-
      
 			$opsi = "
 			
@@ -199,62 +152,19 @@ class Praja extends CI_Controller
 				data-no_spcp='$r->no_spcp' 
 				data-nik_praja='$r->nik_praja' 
 				data-agama='$r->agama'   
-				data-alamat='$r->alamat'
-				data-rt='$r->rt'
-				data-rw='$r->rw'
-				data-provinsi='$r->provinsi'
-				data-kab_kota='$r->kab_kota'
-				data-kelurahan='$r->kelurahan'
-				data-nama_dusun='$r->nama_dusun'
-				data-kecamatan='$r->kecamatan'
-				data-kode_pos='$r->kode_pos'
-				data-jenis_tinggal='$r->jenis_tinggal'
-				data-tlp_pribadi='$r->tlp_pribadi'
-				data-tlp_rumah='$r->tlp_rumah'
-				data-email='$r->email'
-				data-tingkat='$r->tingkat'
-				data-angkatan='$r->angkatan'
-				data-status='$r->status'
-				data-fakultas='$r->fakultas'
-				data-prodi='$r->prodi'
-				data-kewarganegaraan='$r->kewarganegaraan'
-				data-jenis_pendaftaran='$r->jenis_pendaftaran'
-				data-tgl_masuk_kuliah='$r->tgl_masuk_kuliah'
-				data-tahun_masuk_kuliah='$r->tahun_masuk_kuliah'
-				data-pembiayaan='$r->pembiayaan'
-				data-alat_transport='$r->alat_transport'
-				data-biaya_masuk ='$r->biaya_masuk'
-				data-jalur_masuk='$r->jalur_masuk'
-				data-penerima_pks='$r->penerima_pks'
-				data-no_pks='$r->no_pks'
-				data-mulai_semester='$r->mulai_semester'
-
-				data-nik_ayah='$r->nik_ayah'
-				data-nama_ayah='$r->nama_ayah'
-				data-tgllahir_ayah='$r->tgllahir_ayah'
-				data-pendidikan_ayah='$r->pendidikan_ayah'
-				data-pekerjaan_ayah='$r->pekerjaan_ayah'
-				data-penghasilan_ayah='$r->penghasilan_ayah'
-				data-tlp_ayah='$r->tlp_ayah'
-				data-nik_ibu='$r->nik_ibu'
-				data-nama_ibu='$r->nama_ibu'
-				data-tgllahir_ibu='$r->tgllahir_ibu'
-				data-pendidikan_ibu='$r->pendidikan_ibu'
-				data-pekerjaan_ibu='$r->pekerjaan_ibu'
-				data-penghasilan_ibu='$r->penghasilan_ibu'
-				data-tlp_ibu='$r->tlp_ibu'
-
-				data-nik_wali='$r->nik_wali'
-				data-nama_wali='$r->nama_wali'
-				data-tgllahir_wali='$r->tgllahir_wali'
-				data-pendidikan_wali='$r->pendidikan_wali'
-				data-pekerjaan_wali='$r->pekerjaan_wali'
-				data-penghasilan_wali='$r->penghasilan_wali'
-				data-tlp_wali='$r->tlp_wali'
-				data-penempatan='$r->penempatan'
+				data-alamat='$r->alamat'				
 
 
-				data-toggle='modal' data-target='#edit-data-praja' class='btn btn-primary'><i class='fa fas fa-edit'></i></a>   ";
+				data-toggle='modal' data-target='#edit-data-praja' class='btn btn-primary'><i class='fa fas fa-edit'></i></a>
+				
+				<a 
+				href='javascript:;' 
+				data-id='$r->id' 
+				data-nama='$r->nama' 				
+
+
+				data-toggle='modal' data-target='#hapus-data-praja' class='btn btn-danger'><i class='fa fas fa-trash'></i></a>
+				";
 
        
 			$dataall[] = array(
@@ -277,53 +187,7 @@ class Praja extends CI_Controller
         $no_spcp,
         $nik_praja,
         $agama,
-        $alamat,
-        $rt,
-        $rw,
-        $provinsi,
-        $kab_kota,
-        $kelurahan,
-        $nama_dusun,
-        $kecamatan,
-        $kode_pos,
-        $jenis_tinggal,
-        $tlp_pribadi,
-        $tlp_rumah,
-        $email,
-        $kewarganegaraan,
-        $jenis_pendaftaran,
-        $tgl_masuk_kuliah,
-        $tahun_masuk_kuliah,
-        $pembiayaan,
-        $alat_transport,
-        $biaya_masuk,
-        $jalur_masuk,
-        $penerima_pks,
-        $no_pks,
-        $mulai_semester,
-
-        $nik_ayah,
-        $nama_ayah,
-        $tgllahir_ayah,
-        $pendidikan_ayah,
-        $pekerjaan_ayah,
-        $penghasilan_ayah,
-        $tlp_ayah,
-        $nik_ibu,
-        $nama_ibu,
-        $tgllahir_ibu,
-        $pendidikan_ibu,
-        $pekerjaan_ibu,
-        $penghasilan_ibu,
-        $tlp_ibu,
-
-        $nik_wali,
-        $nama_wali,
-        $tgllahir_wali,
-        $pendidikan_wali,
-        $pekerjaan_wali,
-        $penghasilan_wali,
-        $tlp_wali
+        $alamat
 
       );
     }
@@ -343,63 +207,11 @@ class Praja extends CI_Controller
       $editnya['tmpt_lahir'] = $this->input->post('tmpt_lahir', true);
       $editnya['tgl_lahir'] = $this->input->post('tgl_lahir', true);
       $editnya['alamat'] = $this->input->post('alamat', true);
-      $editnya['rt'] = $this->input->post('rt', true);
-      $editnya['rw'] = $this->input->post('rw', true);
-      $editnya['nama_dusun'] = $this->input->post('nama_dusun', true);
-      $editnya['kelurahan'] = $this->input->post('kelurahan', true);
-      $editnya['kode_pos'] = $this->input->post('kode_pos', true);
-      $editnya['kab_kota'] = $this->input->post('kab_kota', true);
-      $editnya['provinsi'] = $this->input->post('provinsi', true);
       $editnya['agama'] = $this->input->post('agama', true);
-      $editnya['kecamatan'] = $this->input->post('kecamatan', true);
-      $editnya['tlp_pribadi'] = $this->input->post('tlp_pribadi', true);
-      $editnya['tlp_rumah'] = $this->input->post('tlp_rumah', true);
-      $editnya['email'] = $this->input->post('email', true);
-      $editnya['prodi'] = $this->input->post('prodi', true);
-      $editnya['penerima_pks'] = $this->input->post('penerima_pks', true);
-      $editnya['no_pks'] = $this->input->post('no_pks', true);
-      $editnya['tgl_masuk_kuliah'] = $this->input->post('tgl_masuk_kuliah', true);
-      $editnya['tahun_masuk_kuliah'] = $this->input->post('tahun_masuk_kuliah', true);
-      $editnya['status'] = $this->input->post('status', true);
-      $editnya['tingkat'] = $this->input->post('tingkat', true);
-      $editnya['angkatan'] = $this->input->post('angkatan', true);
-      $editnya['fakultas'] = $this->input->post('fk', true);
-      $editnya['biaya_masuk'] = $this->input->post('biaya_masuk', true);
-      $editnya['mulai_semester'] = $this->input->post('mulai_semester', true);
-      $editnya['jenis_tinggal'] = $this->input->post('jenis_tinggal', true);
-      $editnya['alat_transport'] = $this->input->post('alat_transport', true);
-      $editnya['kewarganegaraan'] = $this->input->post('kewarganegaraan', true);
-      $editnya['pembiayaan'] = $this->input->post('pembiayaan', true);
-      $editnya['jalur_masuk'] = $this->input->post('jalur_masuk', true);
-      $editnya['nik_ayah'] = $this->input->post('nik_ayah', true);
-      $editnya['nama_ayah'] = $this->input->post('nama_ayah', true);
-      $editnya['tgllahir_ayah'] = $this->input->post('tgllahir_ayah', true);
-      $editnya['pendidikan_ayah'] = $this->input->post('pendidikan_ayah', true);
-      $editnya['pekerjaan_ayah'] = $this->input->post('pekerjaan_ayah', true);
-      $editnya['penghasilan_ayah'] = $this->input->post('penghasilan_ayah', true);
-      $editnya['tlp_ayah'] = $this->input->post('tlp_ayah', true);
-      $editnya['nik_ibu'] = $this->input->post('nik_ibu', true);
-      $editnya['nama_ibu'] = $this->input->post('nama_ibu', true);
-      $editnya['tgllahir_ibu'] = $this->input->post('tgllahir_ibu', true);
-      $editnya['pendidikan_ibu'] = $this->input->post('pendidikan_ibu', true);
-      $editnya['pekerjaan_ibu'] = $this->input->post('pekerjaan_ibu', true);
-      $editnya['penghasilan_ibu'] = $this->input->post('penghasilan_ibu', true);
-      $editnya['tlp_ibu'] = $this->input->post('tlp_ibu', true);
-      $editnya['nik_wali'] = $this->input->post('nik_wali', true);
-      $editnya['nama_wali'] = $this->input->post('nama_wali', true);
-      $editnya['tgllahir_wali'] = $this->input->post('tgllahir_wali', true);
-      $editnya['pendidikan_wali'] = $this->input->post('pendidikan_wali', true);
-      $editnya['pekerjaan_wali'] = $this->input->post('pekerjaan_wali', true);
-      $editnya['penghasilan_wali'] = $this->input->post('penghasilan_wali', true);
-      $editnya['tlp_wali'] = $this->input->post('tlp_wali', true);
-      $editnya['jenis_pendaftaran'] = $this->input->post('jenis_pendaftaran', true);
-      $editnya['penempatan'] = $this->input->post('penempatan', true);
+      
       $nama = $this->input->post('nama', true);
-      // print("<pre>".print_r($editnya,true)."</pre>");exit();
+
       $result = $this->Praja_model->view_edit($editnya);
-      // var_dump($editnya);exit();
-
-
 
       if (!$result) {
         $this->session->set_flashdata('praja', 'DATA PRAJA GAGAL DIUBAH.');
@@ -410,7 +222,6 @@ class Praja extends CI_Controller
         $log['user'] = $this->session->userdata('nip');
         $log['Ket'] = "Mengedit Data Praja, NPP Praja = $isi";
         $log['tanggal'] = date('Y-m-d H:i:s');
-        // var_dump($log);exit();
         $this->Praja_model->log($log);
 
         $this->session->set_flashdata('praja', 'DATA PRAJA - ' . $nama . ' - BERHASIL DIUBAH.');
@@ -418,27 +229,60 @@ class Praja extends CI_Controller
       }
   }
 
-  function get_sub_category()
+	public function tambah_praja()
   {
-    $category_id = $this->input->post('prodi', TRUE);
-    $data = $this->Praja_model->get_sub_category($category_id)->result();
-    echo json_encode($data);
+      $input_data['npp'] = $this->input->post('npp', true);
+      $input_data['no_spcp'] = $this->input->post('no_spcp', true);
+      $input_data['nama'] = $this->input->post('nama', true);
+      $input_data['jk'] = $this->input->post('jk', true);
+      $input_data['nisn'] = $this->input->post('nisn', true);
+      $input_data['npwp'] = $this->input->post('npwp', true);
+      $input_data['nik_praja'] = $this->input->post('nik_praja', true);
+      $input_data['tmpt_lahir'] = $this->input->post('tmpt_lahir', true);
+      $input_data['tgl_lahir'] = $this->input->post('tgl_lahir', true);
+      $input_data['alamat'] = $this->input->post('alamat', true);
+      $input_data['agama'] = $this->input->post('agama', true);
+      
+      $nama = $this->input->post('nama', true);
+
+      $result = $this->Praja_model->tambah_praja($input_data);
+
+      if (!$result) {
+        $this->session->set_flashdata('praja', 'DATA PRAJA GAGAL DITAMBAH.');
+        redirect('praja');
+      } else {
+
+        $isi = $input_data['npp'];
+        $log['user'] = $this->session->userdata('nip');
+        $log['Ket'] = "Menambahkan Data Praja, NPP Praja = $isi";
+        $log['tanggal'] = date('Y-m-d H:i:s');
+        $this->Praja_model->log($log);
+
+        $this->session->set_flashdata('praja', 'DATA PRAJA - ' . $nama . ' - BERHASIL DITAMBAH.');
+        redirect('praja');
+      }
   }
 
+	function hapus_praja(){
+		$id = $this->input->post('id', true);
 
-  function get_sub_provinsi()
-  {
-    $prov = $this->input->post('kab_kota');
-    $data = $this->Praja_model->get_sub_provinsi($prov)->result();
-    echo json_encode($data);
-  }
+		$result = $this->Praja_model->hapus_praja($id);
 
-  function get_sub_kabkota()
-  {
-    $kec = $this->input->post('kecamatan');
-    $data = $this->Praja_model->get_sub_kabkota($kec)->result();
-    echo json_encode($data);
-  }
+      if (!$result) {
+        $this->session->set_flashdata('praja', 'DATA PRAJA GAGAL DIHAPUS.');
+        redirect('praja');
+      } else {
+
+        $isi = $id;
+        $log['user'] = $this->session->userdata('nip');
+        $log['Ket'] = "Menghapus Data Praja, Id Praja = $isi";
+        $log['tanggal'] = date('Y-m-d H:i:s');
+        $this->Praja_model->log($log);
+
+        $this->session->set_flashdata('praja', 'DATA PRAJA BERHASIL DIHAPUS.');
+        redirect('praja');
+      }
+	}
 
   function editstatus()
   {
