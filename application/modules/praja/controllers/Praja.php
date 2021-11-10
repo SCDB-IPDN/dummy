@@ -142,7 +142,7 @@ class Praja extends CI_Controller
 												'nisn'         => $row['M'],
 												'npwp'         => $row['N'],
 												'no_spcp'         => $row['O'],
-												'nik'         => $row['P'],
+												'nik_praja'         => $row['P'],
 												'agama'         => $row['Q']
 										));
 								}else{
