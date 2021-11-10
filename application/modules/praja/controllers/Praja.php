@@ -155,7 +155,7 @@ class Praja extends CI_Controller
 				}
 
 				// INSERT TO DATABASE
-				$this->db->insert_batch('tbl_prja', $data);
+				$this->db->insert_batch('tbl_praja', $data);
 
 				//upload success
 				$this->session->set_flashdata('notifpraja', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
