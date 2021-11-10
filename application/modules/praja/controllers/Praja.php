@@ -75,9 +75,6 @@ class Praja extends CI_Controller
       $kampus = $this->Praja_model->get_kampus()->result();
       $x['kampus'] = $kampus;
 
-     
-
-
       $this->load->view("include/head");
       $this->load->view("include/top-header");
       $this->load->view('view_praja', $x);
@@ -86,6 +83,86 @@ class Praja extends CI_Controller
       $this->load->view("include/footer");
     
   }
+
+	public function uploadaja(){
+		// Load plugin PHPExcel nya
+		$file_mimes = array('application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+		if(isset($_FILES['struk']['name']) && in_array($_FILES['struk']['type'], $file_mimes)) {
+
+				$arr_file = explode('.', $_FILES['struk']['name']);
+				$extension = end($arr_file);
+
+				if($extension != 'xlsx') {
+						$this->session->set_flashdata('notifberita', '<div class="alert alert-success"><b>PROSES IMPORT DATA GAGAL!</b> Format file yang anda masukkan salah!</div>');
+
+						redirect("berita_eksternal"); 
+				} else {
+						$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+				}
+
+				$loadexcel  = $reader->load($_FILES['struk']['tmp_name']);
+				$sheet  = $loadexcel->getActiveSheet()->toArray(null, true, true ,true);
+
+				$list_sheet = $loadexcel->getSheetNames();
+
+				$sheetData = $loadexcel->getSheetByName($list_sheet[0])->toArray(null, true, true ,true);
+
+				$data = array();
+				$numrow = 0;
+
+				foreach($sheetData as $row){
+						
+						if($numrow >= 1){
+								if(isset($row['B']) && isset($row['C']) && isset($row['D']) && isset($row['E'])
+								&& isset($row['F'])
+								&& isset($row['G'])
+								&& isset($row['H'])
+								&& isset($row['I'])
+								&& isset($row['J'])
+								&& isset($row['K'])
+								&& isset($row['L'])
+								&& isset($row['M'])
+								&& isset($row['N'])
+								&& isset($row['O'])
+								&& isset($row['P'])
+								&& isset($row['Q'])
+								){
+										array_push($data, array(
+												'npp'       => $row['B'],
+												'nama'           => $row['C'],
+												'jk'            => $row['D'],
+												'tingkat'         => $row['E'],
+												'angkatan'         => $row['F'],
+												'status'         => $row['G'],
+												'penempatan'         => $row['H'],
+												'fakultas'         => $row['I'],
+												'prodi'         => $row['J'],
+												'tmpt_lahir'         => $row['K'],
+												'tgl_lahir'         => $row['L'],
+												'nisn'         => $row['M'],
+												'npwp'         => $row['N'],
+												'no_spcp'         => $row['O'],
+												'nik'         => $row['P'],
+												'agama'         => $row['Q']
+										));
+								}else{
+										$this->session->set_flashdata('notifpraja', '<div class="alert alert-success"><b>PROSES IMPORT GAGAL !!!</b> Pastikan format isian excel sesuai template!</div>');
+										//redirect halaman
+										redirect('praja');
+								}
+						}
+					 $numrow++;
+				}
+
+				// INSERT TO DATABASE
+				$this->db->insert_batch('tbl_prja', $data);
+
+				//upload success
+				$this->session->set_flashdata('notifpraja', '<div class="alert alert-success"><b>PROSES IMPORT BERHASIL!</b> Data berhasil diimport!</div>');
+				//redirect halaman
+				redirect('praja');
+		}
+	}
 
   public function angkat()
   {
@@ -513,3 +590,4 @@ class Praja extends CI_Controller
     $writer->save('php://output');
   }
 }
+

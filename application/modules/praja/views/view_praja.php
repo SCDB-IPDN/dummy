@@ -24,6 +24,25 @@
                     </div>
                 </div>
 
+				<div class="card-body">
+					<div class="row">
+						<div class="col-xl-7 col-lg-8">
+							<?php echo $this->session->flashdata('notifpraja') ?>
+							<form method="POST" action="<?php echo base_url() ?>praja/uploadaja" enctype="multipart/form-data">
+									<div class="form-group">
+											<label for="exampleInputEmail2">UNGGAH FILE EXCEL BERITA SESUAI TEMPLATE</label>
+											<span class="ml-2">
+													<i class="fa fa-info-circle" data-toggle="popover" data-trigger="hover" data-title="Format yang diupload .xlsx" data-placement="top" data-content=""></i>
+											</span>
+											<input for="struk" type="file" name="struk" class="form-control">
+									</div>
+									<button id="struk" type="submit" class="btn btn-success">UPLOAD FILE</button>
+									<a href="<?php echo base_url() ?>assets/download/datapraja.xlsx" class="btn btn-primary">TEMPLATE</a>
+							</form>
+						</div>
+					</div>
+				</div>
+
                 <div class="table-responsive">
                     <br>
 
